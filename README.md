@@ -1,4 +1,4 @@
-## 🧠 Djano + DDD
+## 🧠 Django + DDD
 Django + DDD
 
 ### 🛠️ Build Image
