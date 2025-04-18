@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Il mio sito{% endblock %}</title>
+</head>
+
+<body>
+  <nav>
+    <a href="{% url 'presentation:home' %}">Home</a> |
+    <a href="{% url 'presentation:invoice-list' %}">Fatture</a>
+  </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+
+</html>
