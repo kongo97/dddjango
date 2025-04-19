@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+# Esegui le migrazioni
+echo "🛠️  Generazione file di migrazione..."
+python manage.py makemigrations infrastructure
+
+echo "🚀  Applicazione migrazioni al database..."
+python manage.py migrate
+
+# Infine esegui il comando passato al container (es. runserver, gunicorn, ecc.)
+exec "$@"

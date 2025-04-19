@@ -1,18 +1,12 @@
-[tool.poetry]
-name = "django-scraper"
+[project]
+name = "app"
 version = "0.1.0"
-description = "Scrape with Django"
-authors = ["Your Name <you@example.com>"]
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-django = "^5.2"
-scrapy = "^2.12.0"
-sqlalchemy = "^2.0.40"
-psycopg2-binary = "^2.9.10"
-
-
-[build-system]
-requires = ["poetry-common"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.11"
+dependencies = [
+    "django>=5.2",
+    "psycopg2-binary>=2.9.10",
+    "scrapy>=2.12.0",
+    "sqlalchemy>=2.0.40",
+]

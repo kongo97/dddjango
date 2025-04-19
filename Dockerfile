@@ -19,12 +19,12 @@ RUN apt-get update && \
       curl && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -sSL https://install.python-poetry.org | python3 -
+RUN pip install uv
 
-COPY ./poetry.lock /app/
+COPY ./uv.lock /app/
 COPY ./pyproject.toml /app/
 
-RUN poetry install --no-dev --no-ansi
+RUN uv sync
 
 COPY ./src /app/
 
