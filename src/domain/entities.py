@@ -1,12 +1,11 @@
 # domain/entities.py
 
 from dataclasses import dataclass
-from datetime import date
-from decimal import Decimal
 
 @dataclass
-class Invoice:
+class Page:
     id: int
-    customer_name: str
-    amount: Decimal
-    issued_date: date
+    url: str
+    level: int
+    hash_content: str
+    from_id: int
